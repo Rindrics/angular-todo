@@ -1,1 +1,8 @@
 <p>todo-list works!</p>
+
+<ul *ngFor="let item of items">
+    <li>{{item}}</li>
+</ul>
+
+<input type="text" #todo>
+<button (click)="addTodo(todo.value)">追加</button>

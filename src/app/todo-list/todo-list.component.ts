@@ -9,7 +9,12 @@ export class TodoListComponent implements OnInit {
 
   constructor() { }
 
+  items = ['item1', 'item2', 'item3']
+
   ngOnInit(): void {
   }
 
+  addTodo(todo:string): void {
+    this.items.push(todo);
+  }
 }
