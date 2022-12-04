@@ -17,4 +17,16 @@ export class TodoListComponent implements OnInit {
   addTodo(todo:string): void {
     this.items.push(todo);
   }
+
+  removeTodo(todo:string): void {
+    let idx = -1;
+    for (let i = 0; i < this.items.length; i++) {
+      if (this.items[i] == todo) {
+        idx = i;
+      }
+    }
+    if (idx != -1) {
+      this.items.splice(idx, 1);
+    }
+  }
 }
